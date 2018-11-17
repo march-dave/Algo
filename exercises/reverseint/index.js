@@ -10,8 +10,10 @@
 
 function reverseInt(n) {
 
-    return n.toString().split('').reverse().join('');
-
+    if ( n > 0 )
+        return n.toString().split('').reverse().join('');
+    else 
+        return n.toString().split('').reverse().join('').substr(n.length-1, 1);
 }
 
 module.exports = reverseInt;
