@@ -12,8 +12,9 @@ function reverseInt(n) {
 
     if ( n > 0 )
         return n.toString().split('').reverse().join('');
-    else 
-        return n.toString().split('').reverse().join('').substr(n.length-1, 1);
+    else {
+        let ret = n.toString().split('').reverse().join('').substr(n.length-1, 1);
+    }
 }
 
 module.exports = reverseInt;
