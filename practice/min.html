@@ -12,10 +12,13 @@
 
             if (a > b) {
                 answer = b;
-            } else if (b > c) {
-                answer = c;
+            } else {
+                answer = a;
             }
 
+            if (answer > c) {
+                answer = c;
+            }
             return answer;
         }
 
