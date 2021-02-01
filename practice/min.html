@@ -9,6 +9,13 @@
     <script>
         function solution(a, b, c) {
             let answer;
+
+            if (a > b) {
+                answer = b;
+            } else if (b > c) {
+                answer = c;
+            }
+
             return answer;
         }
 
