@@ -9,7 +9,8 @@
     <script>
         function solution(s) {
             let answer = s;
-            answer = answer.replaceAll("A", "#")
+            // answer = answer.replaceAll("A", "#");
+            answer = answer.replace(/A/g, "#");
 
             return answer;
         }
