@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+
+<body>
+    <script>
+        function solution(s) {
+            let answer;
+            let sLength = s.length;
+            let numbertype = sLength % 2;
+
+            let num = 0;
+            num = Math.floor(sLength / 2);
+
+            if (numbertype == 1) {
+                // odd num
+                answer = s[num];
+
+            } else {
+                // even num
+                answer = s[num - 1];
+                answer += s[num];
+            }
+
+            return answer;
+        }
+        console.log(solution("good"));
+    </script>
+</body>
+
+</html>
