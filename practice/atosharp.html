@@ -8,9 +8,17 @@
 <body>
     <script>
         function solution(s) {
-            let answer = s;
+            let answer = '';
             // answer = answer.replaceAll("A", "#");
-            answer = answer.replace(/A/g, "#");
+            // answer = answer.replace(/A/g, "#");
+            // for (let x of s) {
+            //     if (x == "A") answer += "#"
+            //     else answer += x
+            // }
+            for (let x of s) {
+                if (x == 'A') answer += '#';
+                else answer += x;
+            }
 
             return answer;
         }
