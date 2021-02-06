@@ -17,17 +17,16 @@
 
             if (numbertype == 1) {
                 // odd num
-                answer = s[num];
+                answer = s.substring(num, num + 1);
 
             } else {
                 // even num
-                answer = s[num - 1];
-                answer += s[num];
+                answer = s.substring(num - 1, num + 1);
             }
 
             return answer;
         }
-        console.log(solution("good"));
+        console.log(solution("study"));
     </script>
 </body>
 
