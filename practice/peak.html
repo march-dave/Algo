@@ -10,13 +10,29 @@
         function solution(arr) {
             let answer;
             let n = arr.length;
+            let cnt = 0;
+
+            let m = Array.from({
+                length: arr.length + 1
+            }, () => 0);
 
             for (let i = 0; i < n; i++) {
                 for (let j = 0; j < n; j++) {
-                    if (arr[i][j] > 0) // 이면 8방향 다 체크
+                    // 이면 8방향 다 체크
+                    if (arr[i][j] > 0) {
+                        if (
+                            arr[i][j] > arr[i - 1][j] &&
+                            arr[i][j] > arr[i][j - 1] &&
+                            arr[i][j] > arr[i][j + 1] &&
+                            arr[i][j] > arr[i + 1][j]
+                        ) {
+                            cnt++;
+                        }
+                    }
                 }
-            }
 
+                answer = cnt;
+            }
 
             return answer;
         }
