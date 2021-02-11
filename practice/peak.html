@@ -8,30 +8,28 @@
 <body>
     <script>
         function solution(arr) {
-            let answer;
+            let answer = 0;
             let n = arr.length;
             let cnt = 0;
 
-            let m = Array.from({
-                length: arr.length + 1
-            }, () => 0);
+            let dx = [-1, 0, 1, 0];
+            let dy = [0, 1, 0, -1];
 
             for (let i = 0; i < n; i++) {
                 for (let j = 0; j < n; j++) {
+                    let flag = 1;
                     // 이면 8방향 다 체크
-                    if (arr[i][j] > 0) {
-                        if (
-                            arr[i][j] > arr[i - 1][j] &&
-                            arr[i][j] > arr[i][j - 1] &&
-                            arr[i][j] > arr[i][j + 1] &&
-                            arr[i][j] > arr[i + 1][j]
-                        ) {
-                            cnt++;
+                    for (let k = 0; k < 4; k++) {
+                        let x = dx[k] + i;
+                        let y = dy[k] + j;
+
+                        if (x >= 0 && x < n && y >= 0 && y < n && arr[x][y] >= arr[i][j]) {
+                            flag = 0;
+                            break;
                         }
                     }
+                    if (flag) answer++;
                 }
-
-                answer = cnt;
             }
 
             return answer;
