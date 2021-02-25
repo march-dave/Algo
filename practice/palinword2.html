@@ -13,7 +13,7 @@
             let arr = s.split(' ');
 
             for (let i = 0; i < Math.floor(arr.length / 2); i++) {
-                if (arr[i].replace(/,;:/, '') != arr[arr.length - i].replace(/,;:/, '')) {
+                if (arr[i].replace(/,;:/, '') != arr[arr.length - i - 1].replace(/,;:/, '')) {
                     answer == "NO";
                     break;
                 }
