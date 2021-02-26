@@ -9,7 +9,13 @@
     <script>
         function solution(str) {
             let answer = "";
-            answer = str.replace(/[^0-9]/g, '')
+            // answer = str.replace(/[^0-9]/g, '')
+
+            for (let x of str) {
+                if (!isNaN(x)) {
+                    answer += x;
+                }
+            }
 
             return parseInt(answer);
         }
