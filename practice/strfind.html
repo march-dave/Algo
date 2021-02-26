@@ -17,12 +17,17 @@
                 }
             }
 
+            let max = -1000;
             for (let j = 0; j < str.length; j++) {
                 if (str[j] !== 'e') {
                     // arr 의 1, 5, 10 에서 가까운 절대값중 작은값 출력
-
+                    for (k = 0; k < arr.length; k++) {
+                        max = max > Math.abs(j - arr[k]);
+                    }
+                    answer.push(max);
                 } else {
                     // 0
+                    answer.push(0);
                 }
             }
 
