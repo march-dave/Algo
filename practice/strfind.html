@@ -12,14 +12,14 @@
             // let p = 1000;
             let arr = [];
             for (let i = 0; i < str.length; i++) {
-                if (str[i] == 'e') {
+                if (str[i] == t) {
                     arr.push(i);
                 }
             }
 
             let min = 1000;
             for (let j = 0; j < str.length; j++) {
-                if (str[j] !== 'e') {
+                if (str[j] !== t) {
                     // arr 의 1, 5, 10 에서 가까운 절대값중 작은값 출력
                     for (let k = 0; k < arr.length; k++) {
                         if (min > Math.abs(j - arr[k])) {
